@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposed Methodology</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700; /* Golden color on hover */
+        }
+
+        /* Diagram container styling */
+        .diagram-container {
+            max-width: 800px;
+            margin: 100px auto; /* Leave space for the navbar */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center-align content */
+        }
+
+        .diagram-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000; /* Black text for the title */
+            margin-bottom: 20px;
+        }
+
+        .diagram-image {
+            display: block;
+            margin: 0 auto 20px; /* Center the image and add spacing below */
+            max-width: 100%; /* Ensure image doesn't overflow the container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('validation') }}">Validation</a>
+        <a href="{{ url_for('results') }}">Results</a>
+        <a href="{{ url_for('diagram') }}">Diagram</a>
+    </nav>
+
+    <!-- Diagram Content -->
+    <div class="diagram-container">
+        <!-- Title -->
+        <div class="diagram-title">Proposed Methodology</div>
+
+        <!-- Include the diagram -->
+        <img src="{{ url_for('static', filename='image1.png') }}" alt="Diagram" class="diagram-image">
+        
+        <!-- Follow with the matter -->
+        <p>
+            The diagram outlines the process of lung disease detection using deep learning. It starts with Data Acquisition, sourcing pneumonia and chest X-ray images. In the Preprocessing stage, tasks like image resizing and normalization are performed to prepare the data. Next, Training Algorithms such as CNNs, VGG16, and VGG19 are applied for feature extraction and learning. The Training phase includes data augmentation and metrics evaluation like accuracy, recall, F1-score, and precision. Finally, the Classifications stage predicts the presence of pneumonia or lung disorders, determining whether a disease is present or not. The workflow ensures efficient and accurate diagnosis.
+        </p>
+    </div>
+
+</body>
+</html>

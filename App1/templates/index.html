@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetal Ultrasound Classification</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="{{ url_for('static', filename='Nec1.jpg') }}" alt="Logo" class="logo">
+            <h1>Optimizing the Powerhouse: Fine-Tuning CNNs for Superior Lung Disorder Detection</h1>
+        </div>
+        <div class="nav-buttons">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('validation') }}">Validation</a>
+            <a href="{{ url_for('results') }}">Results</a>
+            <a href="{{ url_for('diagram') }}">Diagram</a>
+        </div>
+    </header>
+    <main>
+        <p>Welcome to the Image Validation App! This application helps you validate medical images for disease detection.</p>
+        <!-- Add additional components here -->
+    </main>
+</body>
+</html>

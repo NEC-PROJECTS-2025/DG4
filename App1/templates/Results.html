@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700; /* Golden color on hover */
+        }
+
+        /* Results container styling */
+        .results-container {
+            max-width: 1000px;
+            margin: 100px auto 0; /* Leaves space for the navbar */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px; /* Spacing between items */
+            padding: 20px;
+        }
+
+        /* Individual item container styling */
+        .result-item {
+            text-align: center; /* Center-align text and image */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+        }
+
+        .result-item:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+        }
+
+        .result-image {
+            width: 100%; /* Full width of the container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .result-caption {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('validation') }}">Validation</a>
+        <a href="{{ url_for('results') }}">Results</a>
+        <a href="{{ url_for('diagram') }}">Diagram</a>
+    </nav>
+
+    <!-- Results Content -->
+    <div class="results-container">
+        <!-- Individual image with caption -->
+        <div class="result-item">
+            <img src="{{ url_for('static', filename='1.png') }}" alt="Result 1" class="result-image">
+            <div class="result-caption">Result 1: X-ray image showing early detection of disease.</div>
+        </div>
+        <div class="result-item">
+            <img src="{{ url_for('static', filename='2.png') }}" alt="Result 2" class="result-image">
+            <div class="result-caption">Result 2: Healthy lung structure identified.</div>
+        </div>
+        <div class="result-item">
+            <img src="{{ url_for('static', filename='3.png') }}" alt="Result 3" class="result-image">
+            <div class="result-caption">Result 3: Abnormality detected in chest CT scan.</div>
+        </div>
+        <div class="result-item">
+            <img src="{{ url_for('static', filename='4.png') }}" alt="Result 4" class="result-image">
+            <div class="result-caption">Result 4: Classification of lung disease confirmed.</div>
+        </div>
+        <div class="result-item">
+            <img src="{{ url_for('static', filename='5.png') }}" alt="Result 5" class="result-image">
+            <div class="result-caption">Result 5: AI model successfully identified symptoms.</div>
+        </div>
+        <div class="result-item">
+            <img src="{{ url_for('static', filename='6.png') }}" alt="Result 6" class="result-image">
+            <div class="result-caption">Result 6: Detection of pneumonia in the X-ray image.</div>
+        </div>
+    </div>
+
+</body>
+</html>

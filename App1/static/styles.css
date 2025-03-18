@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background: url('/static/lung2.jpg') no-repeat center top;
+    background-size: cover;
+}
+
+header {
+    background-color: #36d3db;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: white;
+}
+
+.nav-buttons {
+    margin-top: 15px;
+}
+
+.nav-buttons a {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #ffffff;
+    color: #36d3db;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.nav-buttons a:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Light background from title downwards */
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}

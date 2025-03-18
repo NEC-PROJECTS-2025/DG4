@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700; /* Golden color on hover */
+        }
+
+        /* About section container */
+        .about-container {
+            max-width: 900px;
+            margin: 120px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for images in the about section */
+        .about-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .inline-image {
+            float: right;
+            margin-left: 20px;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('validation') }}">Validation</a>
+        <a href="{{ url_for('results') }}">Results</a>
+        <a href="{{ url_for('diagram') }}">Diagram</a>
+    </nav>
+
+    <!-- About Us Content -->
+    <div class="about-container" style="background: rgba(255, 255, 255, 0.9)  url_for('static', filename='background.jpg')  no-repeat center center background-size: cover">
+        <h1>About Us</h1>
+        <p>
+            The lungs are very important organs of the respiratory system, which contribute to exchanging oxygen and carbon dioxide. However, the lungs are susceptible to a number of diseases which may impair their function. Such respiratory diseases may range from the common cold and influenza, which are relatively mild conditions causing temporary discomforts, to life-threatening conditions like pneumonia and tuberculosis.
+            <img src="{{ url_for('static', filename='lung1.png') }}" alt="Lung Example 1" class="inline-image">
+        </p>
+        
+        <p>
+            The global burden of respiratory disease is enormous. According to estimates from the Worldwide Conference of Respiratory Societies, in any particular year, approximately 10.4 million people suffer from tuberculosis worldwide, accounting for a death toll of 1.4 million annually. Lung cancer is also a major killer disease; more than 1.6 million deaths occur annually due to this disease worldwide.
+        </p>
+
+        <div class="clearfix"></div>
+
+        <p>
+            The only method of dealing with such diseases is early detection, and this assists in increased survival rates and a reduction in the death rates. Some of the most utilized medical imaging for diagnosis includes X-ray scans of the chest and CT scan images.
+            <img src="{{ url_for('static', filename='lung2.png') }}" alt="Lung Example 2" class="inline-image">
+        </p>
+
+        <p>
+            Recent advances in AI, and more specifically deep learning in recent years, have achieved significant success in automating and improving the accuracy of medical image analysis. CNNs are one of the deep learning models that have shown outstanding results for image classification tasks. Different pre-trained deep learning models, such as CNN, VGG16, and VGG19, are applied for the detection and classification of lung diseases by analyzing chest X-ray and CT scan images.
+        </p>
+
+        <div class="about-image-container">
+            <img src="{{ url_for('static', filename='lung4.png') }}" alt="About Us" class="about-image">
+        </div>
+
+        <p>
+            In this work, publicly available data have been used, and augmentation has been performed to enhance these models' capabilities and generalize their functionality. The performances of custom sequential and functional models that show high potential in clinical settings are compared. Indeed, the results obtained from this study demonstrate that deep learning models are capable of early lung disease detection.
+            <img src="{{ url_for('static', filename='lung3.png') }}" alt="Lung Example 3" class="inline-image">
+        </p>
+
+        <div class="clearfix"></div>
+    </div>
+</body>
+</html>
